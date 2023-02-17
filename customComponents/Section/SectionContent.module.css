@@ -1,0 +1,112 @@
+.card {
+  background: transparent;
+  height: 14.6rem;
+  width: fit-content;
+  margin-top: 0.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: 0.3s;
+  max-width: 75rem;
+}
+
+.cardRow {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card:hover {
+  scale: 1.03;
+}
+
+.card:hover .BottomInfo h2 {
+  color: rgb(106, 23, 23);
+  transition: 0.3s;
+}
+
+.cardBottom {
+  margin: 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.BottomInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.BottomFastAdd {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-items: top;
+}
+
+.BottomInfo h2 {
+  font-size: 2rem;
+  color: var(--color-text-primary);
+}
+
+.BottomInfo p {
+  font-size: 1.7em;
+  color: var(--color-text-primary);
+}
+
+.price {
+  background-color: var(--color-bg-toggle);
+  width: fit-content;
+  padding: 0.2rem;
+}
+
+.BottomFastAdd p {
+  font-size: 1.5rem;
+  color: var(--color-text-primary);
+}
+
+.BottomFastAdd div:hover {
+  background-color: rgb(111, 111, 111);
+  scale: 1.15;
+}
+
+@media (max-width: 830px) {
+  .card {
+    height: fit-content;
+    width: 17rem;
+  }
+
+  .cardRow {
+    flex-direction: column;
+    gap: 0rem;
+  }
+
+  .cardBottom {
+    display: flex;
+    align-items: center;
+  }
+
+  .BottomInfo {
+    display: flex;
+    align-items: center;
+  }
+
+  .BottomInfo p {
+    display: none;
+  }
+
+  .BottomInfo h2 {
+    font-size: 1.5rem;
+  }
+
+  .BottomFastAdd {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .BottomFastAdd p {
+    font-size: 1.4rem;
+  }
+}

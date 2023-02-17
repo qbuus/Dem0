@@ -1,0 +1,69 @@
+.successContainer {
+  margin: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.success {
+  background-color: var(--color-bg-toggle);
+  height: 40vh;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 0rem 4rem;
+  border-radius: 2rem;
+}
+
+.success p {
+  color: var(--color-text-primary);
+  font-size: 2.4rem;
+}
+
+.success div {
+  background-color: var(--color-bg-primary);
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+}
+
+.success button {
+  background-color: green;
+  border: none;
+  color: var(--color-text-primary);
+  border-radius: 1rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.success button:hover {
+  scale: 1.03;
+  background-color: rgb(1, 81, 1);
+}
+
+@media (max-width: 700px) {
+  .success p {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .success p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 510px) {
+  .success p {
+    font-size: 1.2rem;
+  }
+
+  .success button {
+    font-size: 1.4rem;
+  }
+}

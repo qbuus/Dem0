@@ -1,0 +1,46 @@
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  background-color: var(--color-bg-toggle);
+}
+
+.contact form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contact input,
+.contact select,
+.contact textarea {
+  padding: 1.2rem;
+  background: rgb(199, 199, 199);
+  border: 1px solid black;
+}
+
+.contact textarea {
+  height: 15rem;
+  overflow: scroll;
+  font-size: 1.4rem;
+}
+
+.contact button {
+  font-size: 1.3rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin: 0 auto;
+  border: none;
+  border-radius: 0.3rem;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background-color: rgb(181, 181, 181);
+  scale: 1.05;
+}

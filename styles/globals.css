@@ -1,0 +1,50 @@
+body,
+body[data-theme="light"] {
+  --color-bg-primary: #ffffff;
+  --color-bg-toggle: rgb(199, 199, 199);
+  --color-bg-section: rgb(224, 224, 224);
+  --color-bg-hover: rgb(65, 65, 65);
+  --color-text-primary: rgb(37, 37, 37);
+}
+
+body[data-theme="dark"] {
+  --color-bg-primary: rgb(34 41 47);
+  --color-bg-toggle: rgb(93, 93, 93);
+  --color-bg-hover: rgb(231, 231, 231);
+  --color-bg-section: rgb(37, 37, 37);
+  --color-text-primary: rgb(255, 255, 255);
+}
+
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-bg-primary);
+  transition: background 0.3s ease-in-out;
+}
+
+header {
+  max-width: 100vw;
+  background-color: rgb(43, 52, 59);
+}
+
+main {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+footer {
+  padding: 1rem 0rem;
+  max-width: 100vw;
+  background-color: rgb(43, 52, 59);
+}

@@ -1,0 +1,241 @@
+.ProductContainer {
+  margin: 2rem 0rem;
+  padding: 1rem 2rem;
+}
+
+.Product {
+  display: flex;
+  flex-direction: column;
+  width: 60rem;
+  gap: 2rem;
+}
+
+.Product h1 {
+  color: var(--color-text-primary);
+  font-size: 2.4rem;
+}
+
+.ProductImages {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  height: 100%;
+}
+
+.ProductImage {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.ImageAdditional {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.small {
+  width: 90px;
+  height: 60px;
+  cursor: pointer;
+}
+
+.active {
+  border: 2px solid var(--color-text-primary);
+}
+
+.ProductDescription {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.DescriptionRow {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+
+.ProductAction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  background-color: transparent;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-text-primary);
+}
+
+.ProductAction button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: fit-content;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-text-primary);
+  background-color: transparent;
+  border-radius: 1rem;
+  color: var(--color-text-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.ProductAction button div {
+  display: flex;
+}
+
+.ProductAction button:hover {
+  scale: 1.05;
+  background-color: gray;
+}
+
+.Nutrition {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: center;
+  width: fit-content;
+  background-color: transparent;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-text-primary);
+}
+
+.Nutrition h2 {
+  color: var(--color-text-primary);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.NutritionFacts {
+  display: flex;
+  gap: 2rem;
+}
+
+.NutritionFacts div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.NutritionFacts div span,
+.NutritionFacts div p {
+  color: var(--color-text-primary);
+  font-size: 1.6rem;
+}
+
+.ProductCount {
+  display: flex;
+  gap: 0.5rem;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-text-primary);
+  transition: 0.3s;
+}
+
+.ProductCount:hover {
+  scale: 1.05;
+  background-color: grey;
+}
+
+.ProductCount div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.3rem;
+  color: var(--color-text-primary);
+  font-size: 1.7rem;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  padding: 0.3rem;
+  width: fit-content;
+  height: fit-content;
+  color: var(--color-text-primary);
+  font-size: 2rem;
+}
+
+.DetailedInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.DetailedInfo p {
+  color: var(--color-text-primary);
+  font-size: 1.9rem;
+}
+
+.DetailedInfo div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border-top: 1px solid var(--color-text-primary);
+  padding: 2rem 0rem;
+}
+
+.DetailedInfo div p {
+  color: var(--color-text-primary);
+  font-size: 1.8rem;
+}
+
+.DetailedInfo div h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+@media (max-width: 760px) {
+  .Product {
+    width: 100%;
+  }
+
+  .ProductImages {
+    flex-direction: column;
+  }
+
+  .ImageAdditional {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 445px) {
+  .small {
+    width: 7rem;
+    height: 4.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .DescriptionRow {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .small {
+    width: 5rem;
+    height: 3.3rem;
+  }
+}

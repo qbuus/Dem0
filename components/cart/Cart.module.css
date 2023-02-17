@@ -1,0 +1,155 @@
+.cart-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+.cart-container {
+  width: 50rem;
+  height: fit-content;
+  background-color: var(--color-bg-toggle);
+  padding: 4rem 2rem;
+  position: relative;
+  float: right;
+  top: 0;
+}
+
+.cart-heading {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: normal;
+  cursor: pointer;
+  gap: 0.1rem;
+  margin-left: 1rem;
+  border: none;
+  color: var(--color-text-primary);
+  background-color: transparent;
+}
+
+.cart-heading .heading {
+  margin-left: 0.3rem;
+}
+.cart-num-items {
+  margin-left: 0.3rem;
+  color: rgb(106, 23, 23);
+}
+.empty-cart {
+  margin-left: 0.3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+.empty-cart h3 {
+  font-weight: normal;
+  font-size: 1.6rem;
+}
+
+.product-container {
+  margin-top: 1rem;
+  overflow: auto;
+  max-height: 60vh;
+  padding: 1rem 1rem;
+}
+.product {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0rem;
+}
+.product .cart-product-image {
+  width: 20rem;
+  height: 100%;
+  border-radius: 1rem;
+}
+.item-desc .flex {
+  display: flex;
+  gap: 2rem;
+  width: 25rem;
+  color: var(--color-text-primary);
+}
+.item-desc .bottom {
+  margin-top: 7rem;
+}
+
+.flex h5 {
+  font-size: 1.6rem;
+}
+.flex h4 {
+  font-size: 1.6rem;
+}
+.total {
+  display: flex;
+  gap: 2rem;
+}
+.total h3 {
+  font-size: 1.9rem;
+  color: var(--color-text-primary);
+}
+
+.bottom {
+  display: flex;
+  gap: 2rem;
+}
+
+.remove-item {
+  font-size: 2rem;
+  color: rgb(106, 23, 23);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.cart-bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.btn {
+  width: fit-content;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  background-color: rgb(106, 23, 23);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  scale: 1.03;
+}
+
+.quantity-desc {
+  display: flex;
+  gap: 0.5rem;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--color-text-primary);
+  transition: 0.3s;
+}
+.quantity-desc span {
+  font-size: 1.6rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.quantity-desc .minus {
+  color: rgb(106, 23, 23);
+}
+.quantity-desc .num {
+  font-size: 1.6rem;
+}
+.quantity-desc .plus {
+  color: green;
+}
+
+@media (max-width: 516px) {
+  .cart-container {
+    width: 100%;
+  }
+}

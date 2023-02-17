@@ -1,0 +1,41 @@
+.Nav {
+  max-width: 120rem;
+  margin: 1rem auto;
+  padding: 0rem 2rem;
+}
+
+.NavList {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4rem;
+}
+
+.NavList div {
+  padding: 0.3rem 0rem;
+}
+
+.NavList a {
+  text-decoration: none;
+}
+
+.NavList li {
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.NavList li:hover {
+  color: rgb(106, 23, 23);
+  scale: 1.05;
+}
+
+@media (max-width: 400px) {
+  .NavList {
+    gap: 2rem;
+  }
+
+  .NavList li {
+    font-size: 1.6rem;
+  }
+}

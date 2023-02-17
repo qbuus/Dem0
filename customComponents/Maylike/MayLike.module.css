@@ -1,0 +1,82 @@
+.MayLikeContainer {
+  margin: 3rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cardContainer div {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  height: fit-content;
+  transition: 0.3s;
+}
+
+.cardContainer div:hover {
+  scale: 1.03;
+}
+
+.cardContainer div img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.MayLikeContainer h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.cardContainer div h2,
+.cardContainer div p {
+  color: var(--color-text-primary);
+}
+
+.cardContainer div h2 {
+  font-size: 2rem;
+}
+
+.cardContainer div p {
+  font-size: 1.4rem;
+  padding: 0rem 0.3rem;
+  background-color: var(--color-bg-toggle);
+  width: fit-content;
+}
+
+@media (max-width: 670px) {
+  .cardContainer div {
+    width: 100%;
+  }
+
+  .cardContainer {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .MayLikeContainer h1 {
+    font-size: 2.2rem;
+  }
+
+  .cardContainer div h2 {
+    font-size: 1.8rem;
+  }
+
+  .cardContainer div p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .cardContainer div {
+    width: 24rem;
+  }
+}

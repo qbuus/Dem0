@@ -1,0 +1,40 @@
+.Faq {
+  margin: 6rem 0rem;
+  padding: 0rem 2rem;
+}
+
+.Faq-title {
+  color: var(--color-text-primary);
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.Faq-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.faq-body {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0rem;
+  border-bottom: 1px solid var(--color-text-primary);
+}
+
+.body-heading {
+  font-size: 2rem;
+  color: var(--color-text-primary);
+  transition: 0.3s;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.body-heading:hover {
+  background-color: var(--color-bg-toggle);
+}
+
+.body-text {
+  font-size: 1.6rem;
+  color: var(--color-text-primary);
+}
