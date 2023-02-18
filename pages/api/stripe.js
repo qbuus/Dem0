@@ -16,11 +16,13 @@ export default async function handler(req, res) {
         shipping_options: [{ shipping_rate: "shr_1MM8tIIbdqqlvfJjBjtBpOX9" }],
         shipping_options: [{ shipping_rate: "shr_1MM8tXIbdqqlvfJjXqIBaLN3" }],
         line_items: req.body.map((item) => {
+          const img = item.images[0].asset._ref;
           return {
             price_data: {
               currency: "usd",
               product_data: {
                 name: item.name,
+                images: [img],
               },
               unit_amount: (item.price * 100).toFixed(0),
             },
@@ -44,3 +46,12 @@ export default async function handler(req, res) {
     res.status(405).end("Method Not Allowed");
   }
 }
+
+// const img = item.images[0];
+// // const img = item.images[0].asset._ref;
+// // const newImage = img
+// //   .replace(
+// //     "image-",
+// //     "https://cdn.sanity.io/images/vfxfwnaw/production/"
+// //   )
+// //   .replace("-webp", ".webp");
