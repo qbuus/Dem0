@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import styles from "./Success.module.css";
 import { useStateContext } from "../../pagecontext/PageState";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { MdOutlineDone } from "react-icons/md";
 
@@ -32,9 +31,6 @@ const SuccessComponent = () => {
         <div>
           <p>You will be redirected to the home page in a bit</p>
         </div>
-        <Link href={`/`}>
-          <button>Immediate home page</button>
-        </Link>
       </div>
     </div>
   );

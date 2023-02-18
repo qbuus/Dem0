@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import styles from "./Cancel.module.css";
 import { useStateContext } from "../../pagecontext/PageState";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { MdOutlineCancel } from "react-icons/md";
 
@@ -35,9 +34,6 @@ const CancelComponent = () => {
         <div>
           <p>You will be redirected to the home page in a bit</p>
         </div>
-        <Link href={`/`}>
-          <button>Immediate home page</button>
-        </Link>
       </div>
     </div>
   );

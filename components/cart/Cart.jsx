@@ -9,6 +9,7 @@ import getStripe from "../../LIB/getStripe";
 
 const Cart = () => {
   const cartRef = useRef();
+
   const {
     totalPrice,
     totalQuantities,

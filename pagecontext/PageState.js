@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { toast } from "react-hot-toast";
 
 const Context = createContext();
@@ -18,28 +18,20 @@ export const StateContext = ({ children }) => {
       (item) => item._id === product._id
     );
 
-    setTotalPrice(
-      (prevTotalPrice) => prevTotalPrice + product.price * quantity
-    );
-    setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
-
     if (checkProductInCart) {
-      const updatedCartItems = cartItems.map((cartProduct) => {
-        if (cartProduct._id === product._id)
-          return {
-            ...cartProduct,
-            quantity: cartProduct.quantity + quantity,
-          };
-      });
-
-      setCartItems(updatedCartItems);
+      toast("you already have this product in cart");
     } else {
       product.quantity = quantity;
-
+      setTotalPrice(
+        (prevTotalPrice) => prevTotalPrice + product.price * quantity
+      );
+      setTotalQuantities(
+        (prevTotalQuantities) => prevTotalQuantities + quantity
+      );
       setCartItems([...cartItems, { ...product }]);
+      toast.success(`${qty} ${product.name} added to the cart.`);
     }
-
-    toast.success(`${qty} ${product.name} added to the cart.`);
+    setQty(1);
   };
 
   const onRemove = (product) => {

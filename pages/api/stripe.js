@@ -16,14 +16,6 @@ export default async function handler(req, res) {
         shipping_options: [{ shipping_rate: "shr_1MM8tIIbdqqlvfJjBjtBpOX9" }],
         shipping_options: [{ shipping_rate: "shr_1MM8tXIbdqqlvfJjXqIBaLN3" }],
         line_items: req.body.map((item) => {
-          const img = item.images[0].asset._ref;
-          const newImage = img
-            .replace(
-              "image-",
-              "https://cdn.sanity.io/images/joirsdie/production/"
-            )
-            .replace("-webp", ".webp");
-
           return {
             price_data: {
               currency: "usd",

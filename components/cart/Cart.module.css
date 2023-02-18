@@ -49,7 +49,7 @@
 
 .product-container {
   margin-top: 1rem;
-  overflow: auto;
+  overflow: scroll;
   max-height: 60vh;
   padding: 1rem 1rem;
 }
