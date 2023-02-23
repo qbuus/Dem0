@@ -52,12 +52,21 @@ export const StateContext = ({ children }) => {
     foundProduct = cartItems.find((item) => item._id === id);
 
     if (value === "inc") {
-      const updatedItems = cartItems.map((item) =>
-        item._id === id ? { ...item, quantity: item.quantity + 1 } : item
-      );
-      setCartItems(updatedItems);
-      setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
-      setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
+      if (foundProduct.quantity < 10) {
+        const updatedItems = cartItems.map((item) =>
+          item._id === id
+            ? {
+                ...item,
+                quantity: item.quantity + 1,
+              }
+            : item
+        );
+        setCartItems(updatedItems);
+        setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
+        setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
+      } else {
+        toast("You can not buy more than 10");
+      }
     } else if (value === "dec") {
       if (foundProduct.quantity > 1) {
         const updatedData = cartItems.map((item) =>
@@ -71,13 +80,15 @@ export const StateContext = ({ children }) => {
   };
 
   const incQty = () => {
-    setQty((prevQty) => prevQty + 1);
+    setQty((prevQty) => {
+      if (prevQty + 1 > 10) return 10;
+      return prevQty + 1;
+    });
   };
 
   const decQty = () => {
     setQty((prevQty) => {
       if (prevQty - 1 < 1) return 1;
-
       return prevQty - 1;
     });
   };

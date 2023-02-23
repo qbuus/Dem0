@@ -3,7 +3,7 @@ import { MdOutlineTopic, MdCalendarToday } from "react-icons/md";
 import styles from "./[slug].module.css";
 import MayLike from "../../customComponents/Maylike/Maylike";
 
-const ArticlePage = ({ articles, article, filtered }) => {
+const ArticlePage = ({ article, filtered }) => {
   const {
     images,
     date,
@@ -108,7 +108,7 @@ export async function getStaticProps({ params: { slug } }) {
   const filtered = articles.filter((article) => article.slug.current !== slug);
 
   return {
-    props: { articles, article, filtered },
+    props: { article, filtered },
   };
 }
 

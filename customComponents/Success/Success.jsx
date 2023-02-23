@@ -1,22 +1,21 @@
 import { useEffect } from "react";
 import styles from "./Success.module.css";
 import { useStateContext } from "../../pagecontext/PageState";
-import { useRouter } from "next/router";
 import { MdOutlineDone } from "react-icons/md";
+import { useRouter } from "next/router";
 
 const SuccessComponent = () => {
-  const router = useRouter();
-
   const { setCartItems, setTotalPrice, setTotalQuantities } = useStateContext();
+  const router = useRouter();
 
   useEffect(() => {
     localStorage.clear();
     setCartItems([]);
     setTotalPrice(0);
     setTotalQuantities(0);
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       router.push("/");
-    }, 4000);
+    }, 3000);
   }, []);
 
   return (

@@ -14,9 +14,9 @@ const CancelComponent = () => {
     setCartItems([]);
     setTotalPrice(0);
     setTotalQuantities(0);
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       router.push("/");
-    }, 4000);
+    }, 3000);
   }, []);
 
   return (

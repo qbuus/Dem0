@@ -6,7 +6,7 @@ import { AiOutlinePlus, AiOutlineMinus } from "react-icons/ai";
 import { useStateContext } from "../../pagecontext/PageState";
 import MayLike from "../../customComponents/Maylike/Maylike";
 
-const ProductPage = ({ product, products, filtered }) => {
+const ProductPage = ({ product, filtered }) => {
   const {
     price,
     detailsmain,
@@ -144,7 +144,7 @@ export async function getStaticProps({ params: { slug } }) {
   );
 
   return {
-    props: { products, product, filtered },
+    props: { product, filtered },
   };
 }
 
