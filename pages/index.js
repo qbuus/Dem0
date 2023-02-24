@@ -1,14 +1,23 @@
 import HomePage from "../components/home/HomePage";
 import { client } from "../LIB/client";
+import Head from "next/head";
 
 const index = ({ products, bannerData, articles, contactUs }) => {
   return (
-    <HomePage
-      products={products}
-      bannerData={bannerData}
-      articlesData={articles}
-      contactUs={contactUs}
-    />
+    <div>
+      <Head>
+        <meta
+          name="description"
+          content="Shop food read food related articles"
+        />
+      </Head>
+      <HomePage
+        products={products}
+        bannerData={bannerData}
+        articlesData={articles}
+        contactUs={contactUs}
+      />
+    </div>
   );
 };
 

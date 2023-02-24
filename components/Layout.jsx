@@ -42,7 +42,9 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Head>
-        <title>Dem0</title>
+        <link rel="shortcut icon" href="/icon.png" />
+        <title>Seo friendly site</title>
+        <meta name="googlebot" content="notranslate" />
       </Head>
       <header>
         <HeaderTop />
