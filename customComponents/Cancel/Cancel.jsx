@@ -7,7 +7,8 @@ import { MdOutlineCancel } from "react-icons/md";
 const CancelComponent = () => {
   const router = useRouter();
 
-  const { setCartItems, setTotalPrice, setTotalQuantities } = useStateContext();
+  const { setCartItems, setTotalPrice, setTotalQuantities } =
+    useStateContext();
 
   useEffect(() => {
     localStorage.clear();
@@ -29,10 +30,15 @@ const CancelComponent = () => {
           <p>Cart has been cleared</p>
         </div>
         <div>
-          <MdOutlineCancel size={75} color={"rgb(106, 23, 23)"} />
+          <MdOutlineCancel
+            size={75}
+            color={"rgb(106, 23, 23)"}
+          />
         </div>
         <div>
-          <p>You will be redirected to the home page in a bit</p>
+          <p>
+            You will be redirected to the home page in a second
+          </p>
         </div>
       </div>
     </div>

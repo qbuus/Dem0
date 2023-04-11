@@ -5,7 +5,8 @@ import { MdOutlineDone } from "react-icons/md";
 import { useRouter } from "next/router";
 
 const SuccessComponent = () => {
-  const { setCartItems, setTotalPrice, setTotalQuantities } = useStateContext();
+  const { setCartItems, setTotalPrice, setTotalQuantities } =
+    useStateContext();
   const router = useRouter();
 
   useEffect(() => {
@@ -28,7 +29,9 @@ const SuccessComponent = () => {
           <MdOutlineDone size={75} color={"green"} />
         </div>
         <div>
-          <p>You will be redirected to the home page in a bit</p>
+          <p>
+            You will be redirected to the home page in a second
+          </p>
         </div>
       </div>
     </div>

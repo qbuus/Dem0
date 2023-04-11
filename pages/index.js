@@ -2,7 +2,12 @@ import HomePage from "../components/home/HomePage";
 import { client } from "../LIB/client";
 import Head from "next/head";
 
-const index = ({ products, bannerData, articles, contactUs }) => {
+const index = ({
+  products,
+  bannerData,
+  articles,
+  contactUs,
+}) => {
   return (
     <div>
       <Head>
