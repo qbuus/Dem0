@@ -1,5 +1,5 @@
 # Short description
-This is a simple demo app created using NextJs. It mainly allows you to buy things and read articles with the addition of some features that I really wanted to implement. Everything is listed down below in the [Technologies](#technologies) section.
+This is a e-commerce demo app created using NextJs. It mainly allows you to buy things and read articles with the addition of some features that I really wanted to implement. Everything is listed down below in the [Technologies](#technologies) section.
 
 
 ## Table of contents
