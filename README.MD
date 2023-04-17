@@ -15,6 +15,7 @@ Project is created with:
 * Contact form => Emailjs library
 * Notifications => react-hot-toast
 * Testing => react-testing-library | Jest
+* Docker
 
 ## Features
 * Light dark mode switch button
